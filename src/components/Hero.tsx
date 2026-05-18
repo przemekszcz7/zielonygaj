@@ -65,7 +65,7 @@ export const Hero = () => {
       {/* Main Content */}
       <div className="relative z-10 text-center px-4">
         <div className="flex flex-col items-center">
-          <h1 className="text-text-light font-display font-bold leading-tight" style={{ fontSize: 'clamp(3.5rem, 8vw, 8rem)' }}>
+          <h1 className="text-text-light font-display font-bold leading-tight" style={{ fontSize: 'clamp(2.5rem, 8vw, 8rem)' }}>
             {title.split(' ').map((word, i) => (
               <motion.span
                 key={i}

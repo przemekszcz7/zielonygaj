@@ -133,17 +133,22 @@ export const Info = () => {
             className="flex flex-col items-center justify-center"
           >
              {/* Monogram Section */}
-             <div className="bg-bg-dark text-text-light p-12 rounded-full w-full aspect-square max-w-[450px] flex flex-col items-center justify-center border-2 border-gold/20 relative">
-                <div className="absolute inset-0 forest-texture opacity-10 rounded-full" />
+             <div className="bg-bg-dark text-text-light rounded-full w-full aspect-square max-w-[450px] flex flex-col items-center justify-center border-2 border-gold/20 relative overflow-hidden shadow-2xl">
+                <div className="absolute inset-0 forest-texture opacity-20 z-10 pointer-events-none" />
                 <motion.div 
-                  className="absolute inset-0 border border-gold/10 rounded-full scale-95" 
-                  animate={{ scale: [0.95, 1, 0.95] }}
-                  transition={{ duration: 5, repeat: Infinity }}
+                  className="absolute inset-0 border border-gold/20 rounded-full scale-[0.98] z-20 pointer-events-none" 
+                  animate={{ scale: [0.97, 1.01, 0.97] }}
+                  transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                 />
-                <div className="text-gold font-display text-2xl mb-1">Zielony</div>
-                <div className="text-gold-light font-display text-9xl font-bold leading-none select-none">ZG</div>
-                <div className="text-gold font-accent text-5xl mt-[-10px]">Gaj</div>
-                <div className="mt-8 px-4 py-2 border-t border-b border-gold/20 text-xs font-mono tracking-[0.3em] uppercase">Mireń 9</div>
+                <img 
+                  src="https://i.postimg.cc/KYmDZKTh/577043064-3864703357166605-1488788488237477984-n.jpg" 
+                  alt="Zielony Gaj Logo" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg-dark/60 via-transparent to-transparent z-10" />
+                <div className="absolute bottom-12 px-6 py-2 border-t border-b border-gold/30 text-[10px] font-mono tracking-[0.4em] uppercase bg-bg-dark/40 backdrop-blur-md z-30 text-gold-light">
+                  Mireń 9
+                </div>
              </div>
           </motion.div>
         </div>

@@ -24,7 +24,7 @@ export default function App() {
   ];
 
   return (
-    <div className="min-h-screen bg-bg">
+    <div className="min-h-screen bg-bg overflow-x-hidden">
       {/* Navigation */}
       <nav 
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${

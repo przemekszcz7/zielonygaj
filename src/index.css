@@ -76,7 +76,7 @@
 }
 
 body {
-  @apply bg-bg text-text-main font-body antialiased;
+  @apply bg-bg text-text-main font-body antialiased overflow-x-hidden w-full;
 }
 
 .forest-texture {
