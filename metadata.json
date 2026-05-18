@@ -1,0 +1,6 @@
+{
+  "name": "Zielony Gaj - Dom Weselny",
+  "description": "Wyjątkowy dom weselny w Mireniu 9, otoczony lasem. Organizacja imprez okolicznościowych do 200 osób w magicznej atmosferze.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

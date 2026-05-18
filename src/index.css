@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=DM+Mono&family=Great+Vibes&family=Jost:wght@300;400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Jost", sans-serif;
+  --font-mono: "DM Mono", monospace;
+  --font-accent: "Great Vibes", cursive;
+
+  --color-bg: #F4F7F0;
+  --color-bg-section: #ECF0E6;
+  --color-bg-dark: #0F1A0D;
+  --color-bg-darker: #080F07;
+  --color-bg-mid: #152213;
+  --color-bg-card: #1A2A17;
+  --color-forest-green: #2D5A27;
+  --color-green-light: #4A8A42;
+  --color-green-pale: #8AB882;
+  --color-green-mist: #C8DEC2;
+  --color-gold: #C9A84C;
+  --color-gold-light: #E8CE85;
+  --color-cream: #F8F5EE;
+  --color-text-main: #0F1A0D;
+  --color-text-muted: #5A7A52;
+  --color-text-light: #ECF0E6;
+
+  --animate-shimmer: shimmer 8s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-sway: sway 5s ease-in-out infinite;
+  --animate-twinkle: twinkle 4s ease-in-out infinite;
+
+  @keyframes shimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  @keyframes sway {
+    0%, 100% { transform: rotate(-3deg); }
+    50% { transform: rotate(3deg); }
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+  }
+}
+
+:root {
+  --bg: #F4F7F0;
+  --bg-section: #ECF0E6;
+  --bg-dark: #0F1A0D;
+  --bg-darker: #080F07;
+  --bg-mid: #152213;
+  --bg-card: #1A2A17;
+  --green: #2D5A27;
+  --green-light: #4A8A42;
+  --green-pale: #8AB882;
+  --green-mist: #C8DEC2;
+  --green-subtle: rgba(45, 90, 39, 0.1);
+  --gold: #C9A84C;
+  --gold-light: #E8CE85;
+  --gold-subtle: rgba(201, 168, 76, 0.15);
+  --gold-glow: rgba(201, 168, 76, 0.2);
+  --cream: #F8F5EE;
+  --text: #0F1A0D;
+  --text-muted: #5A7A52;
+  --text-light: #ECF0E6;
+  --border: rgba(45, 90, 39, 0.15);
+  --border-gold: rgba(201, 168, 76, 0.2);
+}
+
+body {
+  @apply bg-bg text-text-main font-body antialiased;
+}
+
+.forest-texture {
+  background-image: linear-gradient(
+    90deg,
+    rgba(15, 26, 13, 0.2) 0px,
+    rgba(10, 18, 9, 0.2) 2px,
+    transparent 2px,
+    transparent 100%
+  );
+  background-size: 8px 100%;
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold) 0%,
+    var(--gold-light) 50%,
+    var(--gold) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 5s infinite;
+}
+
+.section-reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: all 0.7s ease;
+}
+
+.section-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wreath-rotate {
+  animation: rotateWreath 100s linear infinite;
+}
+
+@keyframes rotateWreath {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
